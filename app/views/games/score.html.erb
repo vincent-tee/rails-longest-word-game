@@ -1,0 +1,14 @@
+<h1>Result</h1>
+<p>Outcome</p>
+<p><%= @outcome %></p>
+<p><%= @match_result%></p>
+<p><%= @valid_word%></p>
+<p><%= @letter_array %></p>
+<% if @match_result && @valid_word%>
+<p>The word is valid according to the grid and is an English word</p>
+<% elsif @match_result %>
+<p>The word is valid according to the grid, but is not a valid English word</p>
+<% else %>
+<p>The word can't be built out of the original grid</p>
+<% end %>
+<%= link_to 'Play Again', new_path, class: 'text-decoration-none' %>
